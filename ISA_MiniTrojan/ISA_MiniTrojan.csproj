@@ -1,0 +1,286 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{DB745EF3-F7BA-4E76-A218-720526C46590}</ProjectGuid>
+    <OutputType>WinExe</OutputType>
+    <RootNamespace>ISA_MiniTrojan</RootNamespace>
+    <AssemblyName>ISA_MiniTrojan</AssemblyName>
+    <TargetFrameworkVersion>v4.7.2</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <AutoGenerateBindingRedirects>true</AutoGenerateBindingRedirects>
+    <Deterministic>true</Deterministic>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Guna.UI2, Version=2.0.4.6, Culture=neutral, PublicKeyToken=8b9d14aa5142e261, processorArchitecture=MSIL">
+      <HintPath>..\packages\Guna.UI2.WinForms.2.0.4.6\lib\net472\Guna.UI2.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Design" />
+    <Reference Include="System.Management" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Deployment" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Windows.Forms" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="CekKTP.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="CekKTP.Designer.cs">
+      <DependentUpon>CekKTP.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarProduct.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarProduct.Designer.cs">
+      <DependentUpon>DaftarProduct.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarStaff.Designer.cs">
+      <DependentUpon>DaftarStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarUser.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarUser.Designer.cs">
+      <DependentUpon>DaftarUser.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Dashboard.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Dashboard.Designer.cs">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DbSettings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>DbSettings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="DetailTopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailTopUp.Designer.cs">
+      <DependentUpon>DetailTopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DetailTransaksi.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DetailTransaksi.Designer.cs">
+      <DependentUpon>DetailTransaksi.cs</DependentUpon>
+    </Compile>
+    <Compile Include="EditProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="EditProduk.Designer.cs">
+      <DependentUpon>EditProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="GantiPassword.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="GantiPassword.Designer.cs">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Invoice.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Invoice.Designer.cs">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </Compile>
+    <Compile Include="KeranjangShopping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="KeranjangShopping.Designer.cs">
+      <DependentUpon>KeranjangShopping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Login.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Login.Designer.cs">
+      <DependentUpon>Login.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Profile.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Profile.Designer.cs">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Register.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Register.Designer.cs">
+      <DependentUpon>Register.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Shoping.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Shoping.Designer.cs">
+      <DependentUpon>Shoping.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahProduk.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahProduk.Designer.cs">
+      <DependentUpon>TambahProduk.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TambahStaff.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TambahStaff.Designer.cs">
+      <DependentUpon>TambahStaff.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DaftarTopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="DaftarTopUp.Designer.cs">
+      <DependentUpon>DaftarTopUp.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TopUp.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="TopUp.Designer.cs">
+      <DependentUpon>TopUp.cs</DependentUpon>
+    </Compile>
+    <EmbeddedResource Include="CekKTP.resx">
+      <DependentUpon>CekKTP.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarProduct.resx">
+      <DependentUpon>DaftarProduct.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarStaff.resx">
+      <DependentUpon>DaftarStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarUser.resx">
+      <DependentUpon>DaftarUser.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Dashboard.resx">
+      <DependentUpon>Dashboard.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailTopUp.resx">
+      <DependentUpon>DetailTopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DetailTransaksi.resx">
+      <DependentUpon>DetailTransaksi.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="EditProduk.resx">
+      <DependentUpon>EditProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="GantiPassword.resx">
+      <DependentUpon>GantiPassword.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Invoice.resx">
+      <DependentUpon>Invoice.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="KeranjangShopping.resx">
+      <DependentUpon>KeranjangShopping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Login.resx">
+      <DependentUpon>Login.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Profile.resx">
+      <DependentUpon>Profile.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <EmbeddedResource Include="Register.resx">
+      <DependentUpon>Register.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Shoping.resx">
+      <DependentUpon>Shoping.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahProduk.resx">
+      <DependentUpon>TambahProduk.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TambahStaff.resx">
+      <DependentUpon>TambahStaff.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DaftarTopUp.resx">
+      <DependentUpon>DaftarTopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TopUp.resx">
+      <DependentUpon>TopUp.cs</DependentUpon>
+    </EmbeddedResource>
+    <None Include="DbSettings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>DbSettings.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="packages.config" />
+    <None Include="Properties\Settings.settings">
+      <Generator>SettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Settings.settings</DependentUpon>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+    </Compile>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\ClassLibrary\ClassLibrary.csproj">
+      <Project>{3b89705a-8471-44bb-b79a-309518cf6bf4}</Project>
+      <Name>ClassLibrary</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\backgroundFix.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\52518161.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\back-1689837_1280-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\History-removebg-preview.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\2.png" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+</Project>
